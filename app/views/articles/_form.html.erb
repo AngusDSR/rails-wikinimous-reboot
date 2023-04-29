@@ -1,0 +1,10 @@
+<%= form_with model: article do |f| %>
+  <%= f.label :title, class: "fw-bold" %>
+  <%= f.text_field :title, class: "d-block w-100" %>
+  <%= f.label :content, class: "fw-bold" %>
+  <%= f.text_area :content, class: "d-block w-100" %>
+  <div class="d-flex justify-content-between">
+    <%= f.submit "Update article", class: "btn btn-sm btn-light mt-2 border" %>
+    <%= link_to "Cancel", back, class: "btn btn-sm btn-danger mt-2 border opacity-75" %>
+  </div>
+<% end %>

@@ -1,0 +1,10 @@
+<div>
+  <% @articles.each do |article| %>
+    <div class="p-2 text">
+      <h4>
+        <%= link_to article.title, article_path(article), class: "text-decoration-none text-info" %>
+      </h4>
+      <p><%= article.content.truncate_words(18) %></p>
+    </div>
+  <% end %>
+</div>
